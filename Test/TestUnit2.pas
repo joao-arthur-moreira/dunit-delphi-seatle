@@ -29,6 +29,7 @@ type
     procedure TestisPrimo;
     procedure TestisMultiplo;
     procedure Testmedia;
+    procedure TestreverterString;
   end;
 
 implementation
@@ -68,6 +69,17 @@ begin
   ReturnValue := FForm2.media(a,b,c);
 
   CheckEquals(2,ReturnValue);
+end;
+
+procedure TestTForm2.TestreverterString;
+var
+  ReturnValue: string;
+  s:string;
+begin
+  s := 'ovo';
+  ReturnValue := FForm2.reverterString(s);
+
+  CheckEquals('ovo',ReturnValue);
 end;
 
 procedure TestTForm2.TestisMultiplo;

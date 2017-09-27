@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, System.StrUtils;
 
 type
   TForm2 = class(TForm)
@@ -18,6 +18,7 @@ type
     function isPrimo(valor: integer): boolean;
     function isMultiplo(x,y: integer): boolean;
     function media(a,b,c: double):double;
+    function reverterString(s:string): string;
   end;
 
 var
@@ -58,6 +59,11 @@ end;
 function TForm2.media(a, b, c: double): double;
 begin
   result := (a+b+c)/3;
+end;
+
+function TForm2.reverterString(s: string): string;
+begin
+  result := ReverseString(s);
 end;
 
 end.
